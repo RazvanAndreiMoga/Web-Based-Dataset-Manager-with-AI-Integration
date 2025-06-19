@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Make Prediction</h2>
+<form method="POST">
+    {% for f in features %}
+        <div class="mb-2">
+            <label>{{ f }}</label>
+            <input name="{{ f }}" class="form-control" required>
+        </div>
+    {% endfor %}
+    <button class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Train Model</h2>
+<form method="POST">
+    <select class="form-select mb-3" name="model">
+        <option value="regression">Linear Regression</option>
+        <option value="classification">Random Forest Classification</option>
+        <option value="clustering">KMeans Clustering</option>
+    </select>
+    <button class="btn btn-success">Train</button>
+</form>
+{% endblock %}

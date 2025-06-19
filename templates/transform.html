@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Transform Data</h2>
+<form method="POST">
+    <select class="form-select mb-3" name="method">
+        <option value="dummies">One-Hot Encoding (get_dummies)</option>
+        <option value="ordinal">Ordinal Encoding (fit_transform)</option>
+    </select>
+    <button class="btn btn-primary">Apply</button>
+</form>
+{% endblock %}

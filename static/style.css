@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+form input, form select, form button {
+    max-width: 400px;
+}

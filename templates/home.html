@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome {{ current_user.username }}</h2>
+<ul class="list-group">
+    <li class="list-group-item"><a href="/upload">1. Upload Dataset</a></li>
+    <li class="list-group-item"><a href="/explore">2. Explore Dataset</a></li>
+    <li class="list-group-item"><a href="/select_features">3. Select Features</a></li>
+    <li class="list-group-item"><a href="/transform">4. Transform Data</a></li>
+    <li class="list-group-item"><a href="/train">5. Train Model</a></li>
+    <li class="list-group-item"><a href="/predict">6. Predict</a></li>
+</ul>
+<a class="btn btn-outline-danger mt-3" href="/logout">Logout</a>
+{% endblock %}

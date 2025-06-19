@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Explore Dataset</h2>
+<p>Shape: {{ shape[0] }} rows, {{ shape[1] }} columns</p>
+<div class="mb-2">
+    <a class="btn btn-info" href="/dtypes">Column Types</a>
+    <a class="btn btn-info" href="/describe">Describe</a>
+    <a class="btn btn-warning" href="/dropna">Drop Empty Rows</a>
+</div>
+<form method="POST" action="/head" class="mb-2">
+    <input name="n" type="number" class="form-control" placeholder="First N rows">
+    <button class="btn btn-secondary mt-1">Show Head</button>
+</form>
+<form method="POST" action="/tail">
+    <input name="n" type="number" class="form-control" placeholder="Last N rows">
+    <button class="btn btn-secondary mt-1">Show Tail</button>
+</form>
+{% endblock %}

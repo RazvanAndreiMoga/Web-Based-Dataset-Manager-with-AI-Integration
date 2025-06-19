@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Select Features and Label</h2>
+<form method="POST">
+  <h5>Choose Features:</h5>
+  {% for col in columns %}
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="features" value="{{ col }}" id="f{{ loop.index }}">
+      <label class="form-check-label" for="f{{ loop.index }}">{{ col }}</label>
+    </div>
+  {% endfor %}
+
+  <h5 class="mt-4">Choose Label Column:</h5>
+  <select class="form-select" name="label" required>
+    {% for col in columns %}
+      <option value="{{ col }}">{{ col }}</option>
+    {% endfor %}
+  </select>
+
+  <button class="btn btn-primary mt-3">Continue</button>
+</form>
+{% endblock %}
